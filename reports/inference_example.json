@@ -1,0 +1,92 @@
+{
+  "image": "/content/data/yolo_detector/test/images/2021_04_03_10_BW_90DJI_0143_height_50m.JPG",
+  "image_size_px": [
+    4000,
+    3000
+  ],
+  "panels_detected": 5,
+  "clean": 2,
+  "dusty": 3,
+  "panels": [
+    {
+      "id": 1,
+      "bbox": [
+        996,
+        1735,
+        1050,
+        1796
+      ],
+      "crop_size_px": [
+        56,
+        64
+      ],
+      "detection_confidence": 0.8556,
+      "condition": "DUSTY",
+      "classification_confidence": 0.9995
+    },
+    {
+      "id": 2,
+      "bbox": [
+        2123,
+        505,
+        2161,
+        535
+      ],
+      "crop_size_px": [
+        40,
+        32
+      ],
+      "detection_confidence": 0.8196,
+      "condition": "DUSTY",
+      "classification_confidence": 0.9999
+    },
+    {
+      "id": 3,
+      "bbox": [
+        1517,
+        734,
+        1550,
+        790
+      ],
+      "crop_size_px": [
+        34,
+        58
+      ],
+      "detection_confidence": 0.7242,
+      "condition": "CLEAN",
+      "classification_confidence": 0.5172
+    },
+    {
+      "id": 4,
+      "bbox": [
+        2268,
+        1374,
+        2289,
+        1404
+      ],
+      "crop_size_px": [
+        22,
+        31
+      ],
+      "detection_confidence": 0.5534,
+      "condition": "CLEAN",
+      "classification_confidence": 0.5144
+    },
+    {
+      "id": 5,
+      "bbox": [
+        2035,
+        2003,
+        2075,
+        2027
+      ],
+      "crop_size_px": [
+        41,
+        24
+      ],
+      "detection_confidence": 0.376,
+      "condition": "DUSTY",
+      "classification_confidence": 0.9781
+    }
+  ]
+}

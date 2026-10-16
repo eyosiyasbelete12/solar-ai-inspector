@@ -1,0 +1,11 @@
+{
+  "split": "test (Blackwood field - never used in training or checkpoint selection)",
+  "n_images": 84,
+  "n_instances": 420,
+  "precision": 0.6387672710357079,
+  "recall": 0.5976190476190476,
+  "mAP50": 0.5234893794266872,
+  "mAP50-95": 0.23230961237474873,
+  "conf_threshold": 0.25,
+  "iou_threshold": 0.5
+}

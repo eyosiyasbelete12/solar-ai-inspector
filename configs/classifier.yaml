@@ -1,0 +1,31 @@
+# Clean/dusty classifier (torchvision, transfer learning). Used by
+# training/train_classifier.py, training/evaluate_classifier.py and inference/pipeline.py.
+
+seed: 42
+dataset: null              # key from configs/datasets.yaml (task: classification). Must be set before training.
+
+class_names: [clean, dusty]    # order defines the output index: 0 = clean, 1 = dusty
+
+model:
+  name: efficientnet_b0    # efficientnet_b0 | mobilenet_v3_small | mobilenet_v3_large
+  pretrained: true         # ImageNet weights (downloaded on first use, needs internet)
+  image_size: 224
+
+train:
+  epochs: 20
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  num_workers: 4
+  device: auto             # auto | cpu | cuda | cuda:0 | mps
+  deterministic: true
+  output_dir: results/classifier
+  run_name: baseline
+
+split:                     # group-aware: related images stay in the same split (see datasets.yaml group_by)
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+inference:
+  weights: models/classifier/best.pt

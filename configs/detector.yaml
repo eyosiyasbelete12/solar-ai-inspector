@@ -1,0 +1,32 @@
+# Panel detector (Ultralytics YOLO). Used by training/train_detector.py,
+# training/evaluate_detector.py and inference/pipeline.py.
+
+seed: 42
+dataset: null              # key from configs/datasets.yaml (task: detection). Must be set before training.
+
+model: yolo11n.pt          # any Ultralytics detection weights/config name; downloaded on first use (needs internet)
+                           # TODO: confirm the name exists in your installed ultralytics version
+
+train:
+  epochs: 50
+  imgsz: 640
+  batch: 16
+  lr0: 0.01                # initial learning rate
+  patience: 20             # early-stopping patience (epochs)
+  workers: 4
+  device: auto             # auto | cpu | cuda | cuda:0 | mps
+  deterministic: true
+  output_dir: results/detector    # metrics, curves, sample predictions
+  run_name: baseline
+
+split:                     # used when the dataset has no predefined train/val/test split
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+inference:
+  weights: models/detector/best.pt
+  conf_threshold: 0.25     # minimum detection confidence
+  iou_threshold: 0.50      # NMS IoU threshold
+  max_detections: 300
+  crop_padding: 0.02       # fraction of box size added around each crop before classification

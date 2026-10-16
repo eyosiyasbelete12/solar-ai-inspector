@@ -1,0 +1,8 @@
+/models
+/results
+/runs
+data/
+__pycache__/
+*.zip
+*.pt
+!pretrained/*.pt

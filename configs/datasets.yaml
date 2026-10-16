@@ -1,0 +1,57 @@
+# Dataset registry.
+#
+# Nothing is downloaded automatically. For each dataset: read its license at the source,
+# obtain it yourself, place it under data/, then add an entry below and reference its key
+# from configs/detector.yaml or configs/classifier.yaml.
+#
+# Rules this project follows:
+#   * license_verified stays false until YOU have read the license text at the source.
+#   * label_semantics must say what the labels actually depict. The classifier only
+#     "detects dust" if the labels really represent dust/soiling.
+#   * group_by tells the splitter which images belong to the same scene/flight/sequence so
+#     they land in the same split (avoids train/test leakage).
+#
+# Relative paths are relative to the repository root.
+
+datasets: {}
+
+# ---------------------------------------------------------------------------
+# Template: panel DETECTION dataset (YOLO-format labels)
+# ---------------------------------------------------------------------------
+# datasets:
+#   my_detection_dataset:
+#     task: detection
+#     name: TODO dataset name
+#     source_url: TODO
+#     license: TODO            # e.g. exact license name from the source page
+#     license_verified: false
+#     image_dir: data/detection/my_detection_dataset/images
+#     annotation_dir: data/detection/my_detection_dataset/labels
+#     annotation_format: yolo   # yolo | coco | voc
+#     class_names: [solar_panel]
+#     group_by: none            # none | subdirectory | filename_regex | manifest_csv
+#     group_arg: null           # regex (filename_regex) or CSV path (manifest_csv)
+#     notes: ""
+#
+# ---------------------------------------------------------------------------
+# Template: CLEAN/DUSTY classification dataset (one sub-folder per class)
+# ---------------------------------------------------------------------------
+#   my_soiling_dataset:
+#     task: classification
+#     name: TODO dataset name
+#     source_url: TODO
+#     license: TODO
+#     license_verified: false
+#     image_dir: data/classification/my_soiling_dataset
+#     annotation_dir: null
+#     annotation_format: folders
+#     class_names: [Clean, Dirty]          # folder names as they exist on disk
+#     class_map: {Clean: clean, Dirty: dusty}   # rename to the project's two classes
+#     label_semantics: TODO what does "dirty" actually mean in this dataset?
+#     group_by: none
+#     group_arg: null
+#
+# ---------------------------------------------------------------------------
+# Future: your own Ethiopian UAV dataset uses the same entry format. Add it here,
+# point the configs at it, and the training scripts need no code changes.
+# ---------------------------------------------------------------------------

@@ -1,0 +1,5 @@
+# API dependencies (in addition to ../requirements.txt)
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9
+httpx>=0.26   # used by FastAPI's TestClient in tests
