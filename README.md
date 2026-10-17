@@ -35,12 +35,6 @@ The project combines two computer-vision tasks that serve different purposes:
 
 An important question is whether a classifier trained on close-up images can work reliably when panels occupy far fewer pixels in aerial photographs. Solar AI Inspector therefore provides a starting point for investigating the limitations of drone-based inspection, not simply producing clean/dusty predictions.
 
-Current Status and Limitations
-
-The detector and classifier have been trained and evaluated separately on held-out datasets. The detector achieved a recall of 0.598 on its held-out field test, while the classifier achieved 89.6% accuracy on its held-out test set.
-
-These results are encouraging starting points, but they do not establish the accuracy of the complete system on drone imagery. The classifier was trained on close-up soiling images, and end-to-end performance on aerial images has not yet been measured. The detector can also miss panels, so some panels may not receive a classification.
-
 The next steps are to evaluate the integrated pipeline on suitable aerial imagery, investigate how image resolution and viewing conditions affect performance, and determine where the system needs improvement.
 
 Long-Term Vision
