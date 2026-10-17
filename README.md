@@ -1,7 +1,7 @@
 
 
 
-Solar AI Inspector
+#SolarSense AI Inspector
 
 Drone-Based Solar Panel Inspection Using Computer Vision
 
@@ -49,7 +49,7 @@ I hope to develop this project into a practical, affordable tool that helps make
 
 The broader goal is to explore how AI can support the maintenance of renewable-energy infrastructure. Solar AI Inspector is an early step toward that goal, and its future usefulness will depend on rigorous testing, improvement, and validation in real-world conditions.
 
-# Solar AI Inspector
+Solar AI Inspector
 
 Upload an aerial (drone) image of a solar farm and get back how many panels are CLEAN and how many are DUSTY.
 
