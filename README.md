@@ -1,7 +1,7 @@
 
 
 
-#SolarSense AI Inspector
+Solar AI Inspector
 
 Drone-Based Solar Panel Inspection Using Computer Vision
 
